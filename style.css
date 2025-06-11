@@ -1,0 +1,448 @@
+/* Global Resets & Fonts */  
+
+* {  
+  margin: 0;  
+  padding: 0;  
+  box-sizing: border-box;  
+}  
+
+body {  
+  font-family: 'Noto Sans TC', sans-serif;  
+  line-height: 1.7;  
+  color: #333;  
+  scroll-behavior: smooth;  
+}  
+
+/* 头像容器：居中 & 间距 */
+.profile-photo {
+  text-align: center; /* 照片水平居中 */
+  margin: 20px 0;     /* 与标题保持距离 */
+}
+
+/* 头像样式：圆形、大小 */
+.profile-photo img {
+  width: 160px;        /* 照片宽度 */
+  height: 160px;       /* 照片高度 */
+  border-radius: 50%;  /* 圆形效果 */
+  -o-object-fit: cover;
+     object-fit: cover;   /* 保持照片比例，避免拉伸 */
+  border: 2px solid #fff; /* 可选：白色边框突出照片 */
+}
+
+/* Header & Navigation */  
+.navbar {  
+  position: fixed;  
+  top: 0;  
+  width: 100%;  
+  background: #34495E;  
+  display: flex;  
+  justify-content: space-between;  
+  align-items: center;  
+  padding: 1.5rem 5%;  
+  z-index: 1000;  
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);  
+}  
+
+.nav-logo a {  
+  color: #fff;  
+  text-decoration: none;  
+  font-size: 1.5rem;  
+  font-weight: 600;  
+  font-family: 'Noto Serif TC', serif;  
+}  
+
+.nav-links {  
+  list-style: none;  
+  display: flex;  
+  gap:2rem;  
+}  
+
+.nav-links a {  
+  color: #fff;  
+  text-decoration: none;  
+  transition: color 0.3s ease;  
+  font-weight: 300;  
+}  
+
+.nav-links a:hover {  
+  color: #87ABE6;  
+}  
+
+/* Hero Section */  
+.hero {  
+  height: 36.5vh;  
+  background: #87ABE6;  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+  text-align: center;  
+  padding-top: 4rem;  
+}  
+
+.hero-content h1 {  
+  font-family: 'Noto Serif TC', serif;  
+  font-size: 3.5rem;  
+  font-weight: 700;  
+  margin-bottom: 1rem;  
+  color: #34495E;  
+  letter-spacing: -0.5px;  
+}  
+
+.hero-content h2 {  
+  font-size: 1.8rem;  
+  margin-bottom: 1.5rem;  
+  color: #2C3E50;  
+  font-weight: 600;  
+}  
+
+.hero-content p {  
+  font-size: 1.2rem;  
+  color: #555;  
+  max-width: 800px;  
+  margin: 0 auto;  
+}  
+
+/* Section Layout */  
+.section {  
+  padding: 5rem 5%;  
+  background: #fff;  
+}  
+
+.container {  
+  max-width: 1200px;  
+  margin: 0 auto;  
+}  
+
+.section-title {  
+  font-family: 'Noto Serif TC', serif;  
+  font-size: 2.2rem;  
+  margin-bottom: 2.5rem;  
+  color: #34495E;  
+  border-bottom: 3px solid #4CAF50;  
+  display: inline-block;  
+  padding-bottom: 0.7rem;  
+  letter-spacing: 0.5px;  
+}  
+
+/* About Section */  
+.about-content {  
+  display: flex;  
+  gap: 3rem;  
+  align-items: flex-start;  
+}  
+
+.about-details {  
+  flex: 1;  
+  background: #f9f9f9;  
+  padding: 2rem;  
+  border-radius: 10px;  
+}  
+
+.about-details p {  
+  margin-bottom: 2rem;  
+  line-height: 2;  
+}  
+
+.contact-link {  
+  color: #34495E;  
+  text-decoration: none;  
+  display: inline-flex;  
+  align-items: center;  
+  gap: 0.5rem;  
+  transition: color 0.3s ease;  
+}  
+
+.contact-link:hover {  
+  color: #4CAF50;  
+}  
+
+/* Education & Experience Sections */  
+.education-item, .experience-item {  
+  background: #f9f9f9;  
+  padding: 1.2rem;  
+  border-radius: 8px;  
+  margin-bottom: 2rem;  
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);  
+}  
+
+.education-item h3, .experience-item h4 {  
+  font-size: 1.4rem;  
+  margin-bottom: 1rem;  
+  color: #028090;  
+}  
+
+.education-item ul, .experience-item ul {  
+  list-style: disc;  
+  margin-left: 1.5rem;  
+  margin-top: 1rem;  
+}  
+
+.experience-category {  
+  margin-bottom: 3rem;  
+}  
+
+.experience-category h3 {  
+  font-family: 'Noto Serif TC', serif;  
+  font-size: 1.8rem;  
+  color: #9c89b8;  
+  margin-bottom: 1.2rem;  
+  position: relative;  
+  padding-left: 1.5rem;  
+}  
+
+.experience-category h3::before {  
+  content: "";  
+  position: absolute;  
+  left: 0;  
+  top: 50%;  
+  transform: translateY(-50%);  
+  width: 5px;  
+  height: 30px;  
+  background: #cbf3f0;  
+  border-radius: 3px;  
+}  
+
+/* Skills Section */  
+.skills-grid {  
+  display: grid;  
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  
+  gap: 2rem;  
+}  
+
+.skill-category {  
+  background: #a8dadc;  
+  padding: 2rem;  
+  border-radius: 10px;  
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);  
+}  
+
+.skill-category h3 {  
+  font-size: 1.5rem;  
+  margin-bottom: 1.5rem;  
+  color: #e0fbfcE;  
+  border-bottom: 2px solid #E0E0E0;  
+  padding-bottom: 0.8rem;  
+}  
+
+.skill-category ul {  
+  list-style: none;  
+  margin-left: 0;  
+}  
+
+.skill-category li {  
+  margin-bottom: 0.8rem;  
+  padding-left: 1.8rem;  
+  position: relative;  
+}  
+
+.skill-category li::before {  
+  content: "✓";  
+  position: absolute;  
+  left: 0;  
+  color: #f6fff8;  
+  font-weight: bold;  
+}  
+
+/* Achievements Section (with image upload) */  
+.awards-grid {  
+  display: grid;  
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  
+  gap: 2rem;  
+}  
+
+.award-card {  
+  background: #f9f9f9;  
+  padding: 2rem;  
+  border-radius: 10px;  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);  
+}  
+
+.award-card:hover {  
+  transform: translateY(-8px);  
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);  
+}  
+
+.award-image-container {  
+  position: relative;  
+  margin-bottom: 1.5rem;  
+  border-radius: 8px;  
+  overflow: visible; /* Changed to allow full image display */
+  aspect-ratio: 4/3; /* Maintain consistent aspect ratio */
+}  
+
+.award-image {  
+  width: 100%;  
+  height: 100%;  
+  -o-object-fit: contain;  
+     object-fit: contain; /* Show entire image instead of cropping */
+  display: block;  
+  transition: transform 0.3s ease;  
+}  
+
+.award-card:hover .award-image {  
+  transform: scale(1.05);  
+}  
+
+.upload-overlay {  
+  position: absolute;  
+  top: 0;  
+  left: 0;  
+  width: 100%;  
+  height: 100%;  
+  background: rgba(0,0,0,0.4);  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+  opacity: 0;  
+  transition: opacity 0.3s ease;  
+  cursor: pointer;  
+}  
+
+.award-card:hover .upload-overlay {  
+  opacity: 1;  
+}  
+
+.upload-btn {  
+  background: white;  
+  color: #34495E;  
+  padding: 0.8rem 1.5rem;  
+  border-radius: 4px;  
+  display: flex;  
+  align-items: center;  
+  gap: 0.5rem;  
+  font-weight: 500;  
+  transition: background 0.3s ease;  
+  font-size: 0.9rem;  
+}  
+
+.upload-btn:hover {  
+  background: #4CAF50;  
+  color: white;  
+}  
+
+.image-input {  
+  position: absolute;  
+  width: 100%;  
+  height: 100%;  
+  top: 0;  
+  left: 0;  
+  opacity: 0;  
+  cursor: pointer;  
+}  
+
+.award-card h3 {  
+  font-size: 1.3rem;  
+  margin-bottom: 0.5rem;  
+  color: #34495E;  
+}  
+
+/* Projects Section */  
+.project-grid {  
+  display: grid;  
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  
+  gap: 2rem;  
+}  
+
+.project-card {  
+  background: #f9f9f9;  
+  padding: 2rem;  
+  border-radius: 10px;  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);  
+}  
+
+.project-card:hover {  
+  transform: translateY(-8px);  
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);  
+}  
+
+.project-image {  
+  margin-bottom: 1.5rem;  
+  border-radius: 8px;  
+  overflow: visible; /* Changed to allow full image display */
+  aspect-ratio: 4/3; /* Maintain consistent aspect ratio */
+}  
+
+.project-img {  
+  width: 100%;  
+  height: 100%;  
+  -o-object-fit: contain;  
+     object-fit: contain; /* Show entire image instead of cropping */
+  display: block;  
+}  
+
+.project-card h3 {  
+  font-size: 1.3rem;  
+  margin-bottom: 1rem;  
+  color: #34495E;  
+}  
+
+.project-card p {  
+  margin-bottom: 0.8rem;  
+}  
+
+.project-card p strong {  
+  color: #4CAF50;  
+  font-weight: 600;  
+}  
+
+/* Footer */  
+.footer {  
+  background: #34495E;  
+  color: #fff;  
+  text-align: center;  
+  padding: 2rem 5%;  
+}  
+
+/* Responsive Design */  
+@media (max-width: 992px) {  
+  .about-content {  
+    flex-direction: column;  
+  }  
+  .section {  
+    padding: 4rem 5%;  
+  }  
+}  
+
+@media (max-width: 768px) {  
+  .navbar {  
+    flex-direction: column;  
+    align-items: flex-start;  
+    padding: 1rem 5%;  
+  }  
+  .nav-links {  
+    flex-direction: column;  
+    gap: 1rem;  
+    margin-top: 1rem;  
+    width: 100%;  
+  }  
+  .hero-content h1 {  
+    font-size: 2.5rem;  
+  }  
+  .hero-content h2 {  
+    font-size: 1.5rem;  
+  }  
+  .section-title {  
+    font-size: 1.8rem;  
+  }  
+  .award-image-container, .project-image {  
+    aspect-ratio: 4/3; /* Maintain aspect ratio on mobile */
+  }  
+}  
+
+@media (max-width: 576px) {  
+  .hero-content h1 {  
+    font-size: 2rem;  
+  }  
+  
+  .section-title {  
+    font-size: 1.5rem;  
+  }  
+  .education-item, .experience-item, .skill-category, .award-card, .project-card {  
+    padding: 1.5rem;  
+  }  
+  .award-image-container, .project-image {  
+    aspect-ratio: 3/4; /* Taller aspect ratio for better mobile display */
+  }  
+}
